@@ -511,7 +511,8 @@
                 case 'leaf_vintage':
                     pathD = `M 32 2 L ${w-2} 2 L ${w-2} ${h-32} A 30 30 0 0 1 ${w-32} ${h-2} L 2 ${h-2} L 2 32 A 30 30 0 0 1 32 2 Z`;
                     //accent = `<path d="M 32 2 L 2 32 L 2 40 L 40 2 Z" fill="${catColor}" opacity="0.5"/>`;
-                    accent = `<polygon points="2,${h-1} 30,${h-1} 2,${h-30}" fill="${catColor}" opacity="0.45"/>`;
+                    accent = `<polygon points="2,${h-1} 30,${h-1} 2,${h-30}" fill="${catColor}" opacity="0.45"/>
+                        <line x1="45.5" y1="2" x2="45.5" y2="${h-2}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>`;
                     holeSvg = getEyeletSvg(16, 77);
                     break;
 
@@ -523,7 +524,9 @@
 
                 case 'rounded':
                     pathD = `M 10 2 L ${w-10} 2 A 8 8 0 0 1 ${w-2} 10 L ${w-2} ${h-10} A 8 8 0 0 1 ${w-10} ${h-2} L 10 ${h-2} A 8 8 0 0 1 2 ${h-10} L 2 10 A 8 8 0 0 1 10 2 Z`;
-                    accent = `<rect x="3" y="2" width="6" height="${h-6}" fill="${catColor}" rx="2"/>`;
+                    accent = `
+                        <rect x="3" y="2" width="6" height="${h-6}" fill="${catColor}" rx="2"/>
+                        <line x1="45.5" y1="2" x2="45.5" y2="${h-2}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 2"/>`;
                     holeSvg = getEyeletSvg(14, 47.5);
                     break;
 
